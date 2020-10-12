@@ -58,6 +58,11 @@ void cleanString(char* nomeUsuario, char* novoNomeUsuario,int tam){
 		}
 	}
 
+	//Verificar se o último caracter da string é espaço e substituir o valor por final de linha. *(novoNomeUsuario - 1), para não considerar o caracter de final de linha
+	if(*(novoNomeUsuario - 1) == 32)
+		*(novoNomeUsuario - 1) = '\0';
+
+
 	//Aponta para o início do ponteiro
 	novoNomeUsuario = (novoNomeUsuario - count);
 	
